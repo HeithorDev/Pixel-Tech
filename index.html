@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Informática</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Loja de Informática</a>
+        </div>
+    </nav>
+
+    <!-- Filtros de categoria -->
+    <div class="container mb-4 mt-4">
+        <div id="category-filters" class="d-flex overflow-auto"></div>
+    </div>
+
+    <!-- Produtos -->
+    <div class="container">
+        <div class="row" id="products-container"></div>
+    </div>
+
+    <!-- Botão de carrinho fixo -->
+    <button id="cart-btn-fixed" class="btn btn-success rounded-circle shadow-lg">
+        🛒 <span id="cart-count">0</span>
+    </button>
+
+    <!-- Modal do Carrinho -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cartModalLabel">Seu Carrinho</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body" id="cart-items"></div>
+          <div class="modal-footer">
+            <h5 class="me-auto" id="cart-total">Total: R$ 0.00</h5>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continuar Comprando</button>
+            <button type="button" class="btn btn-success" id="checkout-btn">Comprar pelo WhatsApp</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
